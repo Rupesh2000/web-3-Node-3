@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=firstname%>'s details
+    </title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+    <div id="container">
+        <h1>
+            <%=firstname%>
+        </h1>
+        <img src="<%=image ? image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSajBGaxmLXDuMT23LOv41vdsBiLAZp3UgDKPWfyWnqw&s' %>"
+            width="100" height="100">
+        <ul>
+            <li>Nature : <%=nature%>
+            </li>
+            <li>Country : <%=place%>
+            </li>
+            <li>Course : <%=techStack%>
+            </li>
+            <li>Batch : <%=batchNo%>
+            </li>
+        </ul>
+        <h3>Hobbies</h3>
+        <ul>
+            <%hobbies.forEach((hobby)=> {%>
+                <li>
+                    <%=hobby%>
+                </li>
+                <%})%>
+        </ul>
+        <%if(experience) {%>
+            <h3>Experience</h3>
+            <p>
+                <%=experience%>
+            </p>
+            <%}%>
+    </div>
+</body>
+
+</html>
